@@ -3,28 +3,28 @@ package br.ulbra.entity;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
-public class Compra {
+public class Numero {
 
-    public ArrayList compras;
+    public ArrayList numero;
 
-    public Compra() {
-        compras = new ArrayList();
+    public Numero() {
+        numero = new ArrayList();
     }
 
     //create-add
     public void salvar(String item) {
-        compras.add(item);
+        numero.add(item);
         JOptionPane.showMessageDialog(null, "Salvar com sucesso!");
     }
 
     //read - listar
     public String listar() {
         String res = "";
-        if (!compras.isEmpty()) {
+        if (!numero.isEmpty()) {
             for (int i = 0;
-                    i < compras.size();
+                    i < numero.size();
                     i++) {
-                res+= (i+1)+ "- "+compras.get(i)+"\n";
+                res+= (i+1)+ "- "+numero.get(i)+"\n";
             }
         } else {
             res = "Lista vazia!";
@@ -33,24 +33,24 @@ public class Compra {
     }
 
     public void excluir(int indice) {
-        if (!compras.isEmpty()) {
-            if (indice > 0 && indice <= compras.size()) {
-                compras.remove(indice - 1);
+        if (!numero.isEmpty()) {
+            if (indice > 0 && indice <= numero.size()) {
+                numero.remove(indice - 1);
                 JOptionPane.showMessageDialog(null, "Excluído com sucesso!");
         } else {
-            JOptionPane.showMessageDialog(null, "Código inexistente!");
+            JOptionPane.showMessageDialog(null, "Numero inexistente!");
 
         }}else { 
                 JOptionPane.showMessageDialog (null, "Impossivel excluir, lista está vazia!");
                 }
     }
         public void alterar(int indice, String elemento) {
-        if (!compras.isEmpty()) {
-            if (indice > 0 && indice <= compras.size()) {
-                compras.set(indice - 1, elemento);
+        if (!numero.isEmpty()) {
+            if (indice > 0 && indice <= numero.size()) {
+               numero.set(indice - 1, elemento);
                 JOptionPane.showMessageDialog(null, "Alterado com sucesso!");
         } else {
-            JOptionPane.showMessageDialog(null, "Código inexistente!");
+            JOptionPane.showMessageDialog(null, "Numero inexistente!");
 
         }}else { 
                 JOptionPane.showMessageDialog (null, "Impossivel excluir, lista está vazia!");

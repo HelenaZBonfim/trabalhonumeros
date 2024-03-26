@@ -67,7 +67,7 @@ public class FrSobre extends javax.swing.JFrame {
     
 
      
-       java.awt.EventQueue.invokeLater(() -> {
+        java.awt.EventQueue.invokeLater(() -> {
             new FrSobre().setVisible(true);
         });
     }
